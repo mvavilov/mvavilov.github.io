@@ -16,6 +16,20 @@
             padding: 10px 0;
             text-align: center;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
         .content {
             padding: 20px;
         }
@@ -25,26 +39,28 @@
     <header>
         <h1>Research</h1>
     </header>
+    <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#news">News</a>
+        <a href="research.html">Research</a>
+        <a href="index.html#cv">CV</a>
+        <a href="https://arxiv.org/a/vavilov_m_1" target="_blank">Publications</a>
+    </nav>
     <div class="content">
         <h1>Highly Stable CNOT Gate for Fluxonium Qubits</h1>
+        <p>My research focuses on developing gates for quantum information processing using fluxonium qubits. We have achieved a gate fidelity exceeding 99.9% and demonstrated stability for 24 days run without any need for recalibration. This exceptional stability indicates minimal decoherence-related errors during gate operations, which is crucial for building more reliable and scalable quantum circuits.</p>
 
-    <p>My research focuses on developing  gates for quantum information processing using fluxonium qubits. 
-        We have achieved a gate fidelity exceeding 99.9% and demonstrated stability for 24 days run without any need for recalibration. 
-        This exceptional stability indicates minimal decoherence-related errors during gate operations, which is crucial for 
-        building more reliable and scalable quantum circuits.</p>
+        <h2>Key Findings</h2>
+        <ul>
+            <li>Achieved CNOT gate fidelity exceeding 99.9%.</li>
+            <li>Demonstrated 24-day gate stability without recalibration.</li>
+            <li>Showed minimal decoherence-related errors during gate operation.</li>
+            <li>Potential for more reliable and scalable quantum circuits.</li>
+        </ul>
 
-    <h2>Key Findings</h2>
-    <ul>
-        <li>Achieved CNOT gate fidelity exceeding 99.9%.</li>
-        <li>Demonstrated 24-day gate stability without recalibration.</li>
-        <li>Showed minimal decoherence-related errors during gate operation.</li>
-        <li>Potential for more reliable and scalable quantum circuits.</li>
-    </ul>
-
-    <h2>Key Figure: CNOT Gate Characterization</h2>
-    <img src="qubitdrive.png" alt="CNOT Gate Characterization">
-    <div class="figure-caption">Caption describing the figure from the paper. For example: Measured process matrix of the CNOT gate. The real and imaginary components are shown in (a) and (b), respectively. (c) shows the gate fidelity over 24 days.</div>
-
+        <h2>Key Figure: CNOT Gate Characterization</h2>
+        <img src="qubitdrive.png" alt="CNOT Gate Characterization">
+        <div class="figure-caption">Caption describing the figure from the paper. For example: Measured process matrix of the CNOT gate. The real and imaginary components are shown in (a) and (b).</div>
     </div>
 </body>
 </html>
