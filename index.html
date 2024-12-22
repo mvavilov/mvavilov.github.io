@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>My Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #444;
         }
-        h1 {
-            color: #333;
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page!</h1>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+    </nav>
+    <div class="content" id="home">
+        <h2>Home</h2>
+        <p>This is the home section.</p>
+    </div>
+    <div class="content" id="news">
+        <h2>News</h2>
+        <p>This is the news section.</p>
+    </div>
+    <div class="content" id="research">
+        <h2>Research</h2>
+        <p>This is the research section.</p>
+    </div>
+    <div class="content" id="cv">
+        <h2>CV</h2>
+        <p>This is the CV section.</p>
+    </div>
 </body>
 </html>
