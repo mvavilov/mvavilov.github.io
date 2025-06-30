@@ -1,0 +1,46 @@
+---
+fluxonium-qubits:
+  title: Fluxonium Qubits
+  order: 1
+  keywords:
+  - Superconducting Qubits
+  - Gate Fidelity
+  - Quantum Control
+  members:
+  - Jiakai Wang
+  - Yinqi Chen
+  - Valeria Moreno
+  - Nick Dimitriv
+  papers:
+  - title: " Integer Fluxonium Qubit "
+    authors: Raymond A. Mencia, et al.
+    journal: PRXQ
+    year: 2024
+    url: https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.5.040318
+  - title: " 24 days-stable CNOT-gate on fluxonium qubits with over 99.9% fidelity"
+    authors: Wei-Ju Lin, et al.
+    journal: PRXQ
+    year: 2024
+    url: https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.6.010349
+  content: We collaborate with experimentalists to work on fluxonium, a promising
+    2-node superconducting qubit
+  path: fluxonium-qubits
+gatemon:
+  title: Gatemon physics
+  order: 4
+  keywords:
+  - Superconducting qubiy
+  - Condensed matter theory
+  members:
+  - Longyu Ma
+  papers:
+  - title: TBD
+    authors: M. Vavilov, Theory Group
+    journal: Reviews of Modern Physics
+    year: 2024
+    url: https://arxiv.org/abs/2405.xxxxx
+  content: |-
+    Theoretical investigations into fundamental aspects of quantum information processing, including quantum entanglement, quantum communication protocols, and the quantum-classical boundary.
+
+    Our theoretical research explores the fundamental limits and possibilities of quantum information processing, with particular focus on understanding how quantum mechanical effects can be harnessed for computational and communication advantages over classical systems.
+  path: gatemon

@@ -1,0 +1,56 @@
+---
+Jiakai Wang:
+  name: Jiakai Wang
+  image: Jiakai Wang.jpg
+  personal_website: https://jiakaiw.github.io
+  social_media:
+    linkedin: https://linkedin.com/in/jiakaiw
+    twitter: ''
+    github: https://github.com/jiakaiw
+  bio: PhD student working on quantum error correction and fault-tolerant quantum
+    computing.
+  position: PhD Student
+  email: jwang2648atwisc.edu
+Longyu Ma:
+  name: Longyu Ma
+  image: Longyu Ma.jpg
+  personal_website:
+  social_media:
+    linkedin:
+    github:
+  bio: Undergraduate student in physics.
+  position: Undergraduate Student
+  email: ''
+Nick Dimitriv:
+  name: Nick Dimitriv
+  image: Nick Dimitriv.jpg
+  personal_website: ''
+  social_media:
+    linkedin: ''
+    twitter: ''
+    github: ''
+  bio: Former Master student => Phd in EPFL
+  position: ''
+  email: ''
+Valeria Moreno:
+  name: Valeria Moreno
+  image: Valeria Moreno.jpg
+  personal_website: ''
+  social_media:
+    linkedin: https://linkedin.com/in/valeriadiazmoreno
+    twitter: ''
+    github: ''
+  bio: Undergraduate student in physics and data science.
+  position: Fluxonium qubits
+  email: ''
+Yinqi Chen:
+  name: Yinqi Chen
+  image: default.jpg
+  personal_website: ''
+  social_media:
+    linkedin: ''
+    twitter: ''
+    github: ''
+  bio: Former Phd student
+  position: ''
+  email: ''

@@ -1,0 +1,12 @@
+<div class="team-photo-container">
+    <img 
+        src="{{ site.baseurl }}/images/team.png" 
+        alt="Team Photo" 
+        class="team-photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+    >
+    <div class="team-photo-placeholder" style="display: none;">
+        <p>Team photo not found.</p>
+        <p><small>Please add <code>team.jpg</code> or <code>team.png</code> to the <code>/images</code> directory.</small></p>
+    </div>
+</div>

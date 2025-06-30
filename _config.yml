@@ -1,0 +1,36 @@
+title: "Prof. Maxim Vavilov - Quantum Computing Research"
+description: "Research group focused on quantum computing, superconducting qubits, and quantum information processing"
+url: "https://jiakaiw.github.io/"
+baseurl: "/PI_website_fork"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Enable plugins
+plugins_dir: _plugins
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude files from processing
+exclude: 
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - reference
+  - research-directions/README.md
+
+# Include additional files
+include:
+  - _pages
+  - research-directions 

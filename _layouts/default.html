@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-baseurl" content="{{ site.baseurl }}">
+    <title>{{ page.title | default: "Prof. Maxim Vavilov - Quantum Computing Research" }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/components.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/member-containers.css">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon-32x32.png"> -->
+    <script src="{{ site.baseurl }}/js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Prof. Maxim Vavilov</h1>
+                    <p class="nav-subtitle">Quantum Computing Research</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+                    <li><a href="#publications" class="nav-link" data-section="publications">Publications</a></li>
+                    <li><a href="#news" class="nav-link" data-section="news">News</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content" id="main-content">
+        {{ content }}
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; {{ 'now' | date: "%Y" }} Prof. Maxim Vavilov. All rights reserved.</p>
+            <p>Quantum Computing Research Group</p>
+        </div>
+    </footer>
+</body>
+</html> 
