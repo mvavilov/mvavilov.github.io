@@ -1,7 +1,7 @@
 title: "Prof. Maxim Vavilov - Quantum Computing Research"
 description: "Research group focused on quantum computing, superconducting qubits, and quantum information processing"
-url: "https://jiakaiw.github.io/"
-baseurl: "/PI_website_fork"
+url: "https://mvavilov.github.io/"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
