@@ -1,0 +1,23 @@
+id: quantum_gates
+title: Quantum Gate Operations
+icon: /assets/icons/themes/quantum_gates.svg
+
+selected_papers:
+  - title: "Fast Flux Entangling Gate for Fluxonium Circuits"
+    authors: "Yinqi Chen, Konstantin N. Nesterov, Vladimir E. Manucharyan, Maxim G. Vavilov"
+    year: "2022"
+    journal: "Phys. Rev. Applied 18, 034027"
+    url: "https://doi.org/10.1103/PhysRevApplied.18.034027"
+    
+  - title: "CNOT gates for fluxonium qubits via selective darkening of transitions"
+    authors: "Konstantin N. Nesterov, Chen Wang, Vladimir E. Manucharyan, Maxim G. Vavilov"
+    year: "2022"
+    journal: "Phys. Rev. Applied 18, 034063"
+    url: "https://doi.org/10.1103/PhysRevApplied.18.034063"
+    
+  - title: "Demonstration of the Two-Fluxonium Cross-Resonance Gate"
+    authors: "Ebru Dogan, Dario Rosenstock, Loïck Le Guevel, Haonan Xiong, Raymond A. Mencia, Aaron Somoroff, Konstantin N. Nesterov, Maxim G. Vavilov, Vladimir E. Manucharyan, Chen Wang"
+    year: "2022"
+    journal: "arXiv:2204.11829"
+    url: "https://arxiv.org/abs/2204.11829"
+

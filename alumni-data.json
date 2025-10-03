@@ -1,0 +1,31 @@
+---
+layout: null
+---
+{
+  "phd_alumni": [
+    {% for alumnus in site.data.alumni.phd_alumni %}
+    {
+      "name": {{ alumnus.name | jsonify }},
+      "position": {{ alumnus.position | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "postdoc_alumni": [
+    {% for alumnus in site.data.alumni.postdoc_alumni %}
+    {
+      "name": {{ alumnus.name | jsonify }},
+      "position": {{ alumnus.position | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "masters_undergrad_alumni": [
+    {% for alumnus in site.data.alumni.masters_undergrad_alumni %}
+    {
+      "name": {{ alumnus.name | jsonify }},
+      "position": {{ alumnus.position | jsonify }},
+      "type": {{ alumnus.type | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+

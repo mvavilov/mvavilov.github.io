@@ -1,0 +1,10 @@
+id: hybrid_systems
+title: Hybrid Quantum Systems
+icon: /assets/icons/themes/tensor.svg
+
+selected_papers:
+  - title: "Coupling superconducting qubits to mechanical resonators"
+    authors: "Michael Brown, Maxim G. Vavilov, Lisa White"
+    year: "2023"
+    journal: "Science 381, 724"
+

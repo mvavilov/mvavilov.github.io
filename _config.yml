@@ -1,15 +1,29 @@
+# Site Settings
 title: "Prof. Maxim Vavilov - Quantum Computing Research"
-description: "Research group focused on quantum computing, superconducting qubits, and quantum information processing"
-url: "https://mvavilov.github.io/"
+description: "Quantum Computing Research Group focused on superconducting qubits, quantum error correction, and quantum information processing"
+author: "Prof. Maxim Vavilov"
+email: "vavilov@wisc.edu"
+url: "https://mvavilov.github.io"
 baseurl: ""
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-# Enable plugins
+# Enable plugins directory
 plugins_dir: _plugins
 
 # Collections and defaults
@@ -19,9 +33,14 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
 
 # Exclude files from processing
-exclude: 
+exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
@@ -29,8 +48,37 @@ exclude:
   - .bundle
   - reference
   - research-directions/README.md
+  - note_not_to_upload.md
+  - WEBSITE_DOCUMENTATION.md
+  - update_research.sh
+  - scripts
+  - JiakaiW.github.io-main
 
 # Include additional files
 include:
   - _pages
-  - research-directions 
+  - _includes
+
+# Sass/SCSS settings
+sass:
+  style: compressed
+  sass_dir: css
+
+# Timezone
+timezone: America/Chicago
+
+# SEO and social
+twitter:
+  username: quantum_computing
+  card: summary
+
+social:
+  name: Prof. Maxim Vavilov
+  links:
+    - https://arxiv.org/search/?query=au:Maxim+Vavilov&searchtype=author
+
+# Google Analytics (add your tracking ID if you have one)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Additional metadata
+repository: mvavilov/mvavilov.github.io

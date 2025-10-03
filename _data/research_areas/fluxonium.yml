@@ -1,0 +1,23 @@
+id: fluxonium
+title: Fluxonium Qubits
+icon: /assets/icons/themes/fluxonium.svg
+
+selected_papers:
+  - title: "24 days-stable CNOT-gate on fluxonium qubits with over 99.9% fidelity"
+    authors: "Wei-Ju Lin, Hyunheung Cho, Yinqi Chen, Maxim G. Vavilov, Chen Wang, Vladimir E. Manucharyan"
+    year: "2024"
+    journal: "arXiv:2407.15783"
+    url: "https://arxiv.org/abs/2407.15783"
+    
+  - title: "Verifying the analogy between transversely coupled spin-1/2 systems and inductively-coupled fluxoniums"
+    authors: "Wei-Ju Lin, Hyunheung Cho, Yinqi Chen, Maxim G. Vavilov, Chen Wang, Vladimir E. Manucharyan"
+    year: "2024"
+    journal: "arXiv:2407.15450"
+    url: "https://arxiv.org/abs/2407.15450"
+    
+  - title: "Fluxonium Qubits in a Flip-Chip Package"
+    authors: "Aaron Somoroff, Patrick Truitt, Adam Weis, Jacob Bernhardt, Daniel Yohannes, Jason Walter, Konstantin Kalashnikov, Mario Renzullo, Raymond A. Mencia, Maxim G. Vavilov, Vladimir E. Manucharyan, Igor V. Vernik, Oleg Mukhanov"
+    year: "2023"
+    journal: "arXiv:2303.01481"
+    url: "https://arxiv.org/abs/2303.01481"
+

@@ -1,0 +1,17 @@
+id: circuit_qed
+title: Circuit QED & Quantum Circuits
+icon: /assets/icons/themes/circuit_qed.svg
+
+selected_papers:
+  - title: "Voltage Activated Parametric Entangling Gates on Gatemons"
+    authors: "Yinqi Chen, Konstantin N. Nesterov, Hugh Churchill, Javad Shabani, Vladimir E. Manucharyan, Maxim G. Vavilov"
+    year: "2023"
+    journal: "arXiv:2304.08469"
+    url: "https://arxiv.org/abs/2304.08469"
+    
+  - title: "Excitation dynamics in inductively coupled fluxonium circuits"
+    authors: "A. Barış Özgüler, Vladimir E. Manucharyan, Maxim G. Vavilov"
+    year: "2021"
+    journal: "arXiv:2104.03300"
+    url: "https://arxiv.org/abs/2104.03300"
+

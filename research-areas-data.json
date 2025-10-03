@@ -1,0 +1,32 @@
+---
+layout: null
+---
+{
+  "areas": [
+    {% assign areas_index = site.data.research_areas_index.areas %}
+    {% for area_id in areas_index %}
+    {% assign area = site.data.research_areas[area_id] %}
+    {% if area %}
+    {
+      "id": "{{ area.id }}",
+      "title": "{{ area.title }}",
+      "icon": "{{ area.icon }}",
+      "selected_papers": [
+        {% if area.selected_papers %}
+        {% for paper in area.selected_papers %}
+        {
+          "title": {{ paper.title | jsonify }},
+          "authors": {{ paper.authors | jsonify }},
+          "year": "{{ paper.year }}",
+          "journal": {{ paper.journal | jsonify }},
+          "url": {{ paper.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+        {% endif %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+    {% endfor %}
+  ]
+}
+

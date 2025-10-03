@@ -1,0 +1,20 @@
+# Research Areas Index
+# This file lists all available research area files to be displayed
+# To add a new research area:
+#   1. Create a YAML file in _data/research_areas/ (e.g., my_area.yml)
+#   2. Add the file ID (without .yml extension) to the list below
+# Only areas listed here will be displayed on the website
+
+areas:
+  - fluxonium
+  - josephson
+  - circuit_qed
+  - quantum_gates
+  - many_body
+  - mesoscale
+  
+# Additional research areas available (uncomment to display):
+# - topological       # Topological Quantum Computing
+# - decoherence       # Quantum Decoherence Studies  
+# - hybrid_systems    # Hybrid Quantum Systems
+

@@ -1,0 +1,17 @@
+---
+layout: null
+---
+{
+  "recent_news": [
+    {% for item in site.data.news.recent_news %}
+    {
+      "title": {{ item.title | jsonify }},
+      "date": "{{ item.date }}",
+      "summary": {{ item.summary | jsonify }},
+      "link": {{ item.link | jsonify }},
+      "category": {{ item.category | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+

@@ -1,0 +1,17 @@
+id: josephson
+title: Josephson Junction Physics
+icon: /assets/icons/themes/josephson.svg
+
+selected_papers:
+  - title: "Quasiparticle dynamics in epitaxial Al-InAs planar Josephson junctions"
+    authors: "Bassel Heiba Elfeky, William M. Strickland, Jaewoo Lee, James T. Farmer, Sadman Shanto, Azarin Zarassi, Dylan Langone, Maxim G. Vavilov, Eli M. Levenson-Falk, Javad Shabani"
+    year: "2023"
+    journal: "PRX Quantum 4, 030339"
+    url: "https://doi.org/10.1103/PRXQuantum.4.030339"
+    
+  - title: "Superconducting resonators with voltage-controlled frequency and nonlinearity"
+    authors: "William M. Strickland, Bassel Heiba Elfeky, Joseph O'Connell Yuan, William F. Schiela, Peng Yu, Dylan Langone, Maxim G. Vavilov, Vladimir E. Manucharyan, Javad Shabani"
+    year: "2023"
+    journal: "Phys. Rev. Applied 19, 034021"
+    url: "https://doi.org/10.1103/PhysRevApplied.19.034021"
+

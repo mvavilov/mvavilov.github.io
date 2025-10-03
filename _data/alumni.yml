@@ -1,0 +1,32 @@
+phd_alumni:
+  - name: "Canran Xu"
+    position: "Postdoc @ HKU → Amazon → eBay"
+  - name: "Zhenyi Qi"
+    position: "Google → Anthropic"
+  - name: "Yinqi Chen"
+    position: "Postdoc @ Louisiana State University"
+  - name: "Amrit Poudel"
+    position: "IonQ"
+  - name: "Dushko Kuzmanovski"
+    position: "post-doc @Uppsala University -> Stockholm University"
+
+postdoc_alumni:
+  - name: "Dr. Konstantin Nesterov"
+    position: "Atlantic Quantum"
+  - name: "Dr. Anton Vorontsov"
+    position: "Montana State University"
+  - name: "Dr. Viktoriia Kornich"
+    position: "University of Würzburg, Germany"
+  - name: "Dr. Clement Wong"
+    position: "Lincoln Laboratory (LPS)"
+  - name: "Dr. Luke S. Langsjoen"
+    position: "Patent Law Practice"
+
+masters_undergrad_alumni:
+  - name: "Kangbo Li"
+    position: "PhD @ Cornell University"
+    type: "Undergrad"
+  - name: "Jacques van Damme"
+    position: "PhD @ KU Leuven → imec"
+    type: "Master's"
+

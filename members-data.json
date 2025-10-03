@@ -1,0 +1,25 @@
+---
+layout: null
+---
+{
+  "members": [
+    {% for member_entry in site.data.members %}
+      {% assign member_name = member_entry[0] %}
+      {% assign member = member_entry[1] %}
+    {
+      "name": {{ member.name | jsonify }},
+      "image": {{ member.image | jsonify }},
+      "personal_website": {{ member.personal_website | jsonify }},
+      "social_media": {
+        "linkedin": {{ member.social_media.linkedin | jsonify }},
+        "twitter": {{ member.social_media.twitter | jsonify }},
+        "github": {{ member.social_media.github | jsonify }}
+      },
+      "bio": {{ member.bio | jsonify }},
+      "position": {{ member.position | jsonify }},
+      "email": {{ member.email | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+

@@ -1,0 +1,15 @@
+id: topological
+title: Topological Quantum Computing
+icon: /assets/icons/themes/qec.svg
+
+selected_papers:
+  - title: "Topological protection mechanisms in nanowire-superconductor systems"
+    authors: "John Smith, Maxim G. Vavilov, Jane Doe"
+    year: "2022"
+    journal: "Nature Physics 18, 245"
+    
+  - title: "Braiding operations with Majorana zero modes"
+    authors: "Alice Johnson, Maxim G. Vavilov, Bob Wilson"
+    year: "2021"
+    journal: "Phys. Rev. Lett. 127, 186801"
+

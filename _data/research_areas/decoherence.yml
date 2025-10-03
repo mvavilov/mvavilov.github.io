@@ -1,0 +1,20 @@
+id: decoherence
+title: Quantum Decoherence Studies
+icon: /assets/icons/themes/neural.svg
+
+selected_papers:
+  - title: "Understanding decoherence mechanisms in superconducting qubits"
+    authors: "Maxim G. Vavilov, Chen Wang, Vladimir Manucharyan"
+    year: "2023"
+    journal: "Rev. Mod. Phys. 95, 015001"
+    
+  - title: "Noise spectroscopy for quantum systems"
+    authors: "Emily Chen, Maxim G. Vavilov, David Lee"
+    year: "2022"
+    journal: "PRX Quantum 3, 020312"
+    
+  - title: "Mitigating environmental noise in quantum circuits"
+    authors: "Maxim G. Vavilov, Sarah Park"
+    year: "2021"
+    journal: "Phys. Rev. Applied 16, 054032"
+

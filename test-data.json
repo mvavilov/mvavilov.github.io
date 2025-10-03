@@ -1,0 +1,9 @@
+---
+layout: null
+---
+{
+  "test": "{{ site.data.research_areas.areas }}",
+  "fluxonium_title": "{{ site.data.research_areas.fluxonium.title }}",
+  "all_keys": "{{ site.data.research_areas | jsonify }}"
+}
+

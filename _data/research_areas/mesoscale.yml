@@ -1,0 +1,17 @@
+id: mesoscale
+title: Mesoscale & Nanoscale Physics
+icon: /assets/icons/themes/mesoscale.svg
+
+selected_papers:
+  - title: "Majorana bound states under the influence of periodic magnetic fields"
+    authors: "Sayan Bandyopadhyay, Maxim G. Vavilov"
+    year: "2020"
+    journal: "Phys. Rev. B 102, 024517"
+    url: "https://doi.org/10.1103/PhysRevB.102.024517"
+    
+  - title: "Phonon-induced decoherence of a charge quadrupole qubit"
+    authors: "Zhujing Xu, Xuedong Hu, Maxim G. Vavilov"
+    year: "2019"
+    journal: "Phys. Rev. B 99, 085306"
+    url: "https://doi.org/10.1103/PhysRevB.99.085306"
+

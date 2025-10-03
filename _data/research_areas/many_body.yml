@@ -1,0 +1,17 @@
+id: many_body
+title: Quantum Many-Body Systems
+icon: /assets/icons/themes/many_body.svg
+
+selected_papers:
+  - title: "The fate of quantum many-body scars in the presence of disorder"
+    authors: "Ian Mondragon-Shem, Maxim G. Vavilov, Ivar Martin"
+    year: "2021"
+    journal: "PRX Quantum 2, 030349"
+    url: "https://doi.org/10.1103/PRXQuantum.2.030349"
+    
+  - title: "Impacts of random filling on spin squeezing via Rydberg dressing in optical clocks"
+    authors: "Cong Li, Yinqi Chen, Stefan Schداd, Maxim G. Vavilov, Subhadeep Gupta"
+    year: "2020"
+    journal: "Phys. Rev. Research 2, 033298"
+    url: "https://doi.org/10.1103/PhysRevResearch.2.033298"
+

@@ -1,0 +1,24 @@
+<nav>
+    <div class="nav-brand">
+        <div class="nav-brand-logo">
+            <a href="https://www.wisc.edu/" target="_blank" style="text-decoration: none;">
+                <img src="{{ site.baseurl }}/assets/uw-logo-horizontal-1-color-web-digital.svg" alt="University of Wisconsin-Madison">
+            </a>
+        </div>
+        <div class="nav-brand-text">
+            <h1>Maxim G. Vavilov</h1>
+            <p>Condensed Matter Theory & Quantum Computing</p>
+        </div>
+    </div>
+    
+    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="{{ site.baseurl }}/" class="nav-link">Home</a></li>
+        <li><a href="{{ site.baseurl }}/publications/" class="nav-link">Publications</a></li>
+    </ul>
+</nav>
