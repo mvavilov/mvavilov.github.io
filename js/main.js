@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (themesGrid) {
         loadResearchThemes();
     }
+    
+    // Setup hero image thumbs up animation
+    setupHeroImageInteraction();
 });
 
 // ===== Mobile Menu Setup =====
@@ -622,6 +625,46 @@ function renderResearchThemes(areas) {
     container.innerHTML = html;
 }
 
+// ===== Hero Image Thumbs Up Animation =====
+function setupHeroImageInteraction() {
+    const heroImage = document.querySelector('.hero-image img');
+    if (!heroImage) return;
+    
+    heroImage.addEventListener('click', function(e) {
+        createThumbsUpAnimation(e);
+    });
+}
+
+function createThumbsUpAnimation(event) {
+    // Get the hero image container for positioning
+    const heroImageContainer = document.querySelector('.hero-image');
+    if (!heroImageContainer) return;
+    
+    // Create thumbs up emoji element
+    const thumbsUp = document.createElement('div');
+    thumbsUp.className = 'thumbs-up-emoji';
+    thumbsUp.textContent = '👍';
+    
+    // Get the mouse position relative to the hero image container
+    const rect = heroImageContainer.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+    
+    // Position the emoji at the mouse click position
+    thumbsUp.style.left = mouseX + 'px';
+    thumbsUp.style.top = mouseY + 'px';
+    
+    // Add to hero image container
+    heroImageContainer.appendChild(thumbsUp);
+    
+    // Remove the element after animation completes
+    setTimeout(() => {
+        if (thumbsUp.parentNode) {
+            thumbsUp.parentNode.removeChild(thumbsUp);
+        }
+    }, 1000);
+}
+
 // Export functions
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -629,6 +672,7 @@ if (typeof module !== 'undefined' && module.exports) {
         loadArXivPublications,
         loadAlumni,
         loadNews,
-        loadResearchThemes
+        loadResearchThemes,
+        setupHeroImageInteraction
     };
 }

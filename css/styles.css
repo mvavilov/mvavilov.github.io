@@ -842,6 +842,40 @@ footer a:hover {
     border-radius: 8px;
 }
 
+/* ===== Thumbs Up Animation ===== */
+.thumbs-up-emoji {
+    position: absolute;
+    font-size: 6rem;
+    pointer-events: none;
+    z-index: 1000;
+    animation: thumbsUpJump 1s ease-out forwards;
+}
+
+@keyframes thumbsUpJump {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-30px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(1);
+    }
+}
+
+.hero-image {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
 /* ===== Members Grid ===== */
 #members-grid {
     display: grid;
