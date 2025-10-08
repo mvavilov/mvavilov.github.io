@@ -69,16 +69,6 @@ title: "Prof. Maxim Vavilov - Condensed Matter Theory & Quantum Computing"
                         <li>Hybrid quantum-classical algorithms</li>
                     </ul>
                 </div>
-
-                <div class="research-card">
-                    <h4 style="color: var(--color-uw-red); margin-bottom: 0.8rem;">Collaborations</h4>
-                    <ul style="font-size: 0.9rem; line-height: 1.7; color: var(--color-text-medium); padding-left: 1.5rem;">
-                        <li>Experimental groups at UW-Madison</li>
-                        <li>National laboratories (Argonne, Oak Ridge)</li>
-                        <li>Quantum computing companies (IonQ, IBM)</li>
-                        <li>International research institutions</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
