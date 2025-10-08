@@ -63,10 +63,9 @@ title: "Prof. Maxim Vavilov - Condensed Matter Theory & Quantum Computing"
                 <div class="research-card">
                     <h4 style="color: var(--color-uw-red); margin-bottom: 0.8rem;">Current Projects</h4>
                     <ul style="font-size: 0.9rem; line-height: 1.7; color: var(--color-text-medium); padding-left: 1.5rem;">
-                        <li>Fluxonium qubit gate optimization</li>
-                        <li>Quantum error correction for superconducting circuits</li>
-                        <li>Noise characterization and mitigation</li>
-                        <li>Hybrid quantum-classical algorithms</li>
+                        <li>Fluxonium qubit systems, 2-qbt gates, and scaling up fluxonium systems</li>
+                        <li>Quantum error correction of superconducting qubits</li>
+                        <li>Novel solid-state-based qubit theory</li>
                     </ul>
                 </div>
             </div>
