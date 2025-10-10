@@ -1,3 +1,8 @@
+<!--
+This is a multi-line comment.
+Any text within these tags will not be rendered.
+
+
 ---
 layout: default
 title: "Prof. Maxim Vavilov - Condensed Matter Theory & Quantum Computing"
@@ -267,3 +272,5 @@ title: "Prof. Maxim Vavilov - Condensed Matter Theory & Quantum Computing"
         </div>
     </div>
 </section> 
+
+-->
