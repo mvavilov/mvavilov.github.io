@@ -1,8 +1,8 @@
-
+<!-- 
 ---
 layout: default
 title: "Prof. Maxim Vavilov - Condensed Matter Theory & Quantum Computing"
----
+--- -->
 
 <!-- Hero Section -->
 <div class="hero-container">
