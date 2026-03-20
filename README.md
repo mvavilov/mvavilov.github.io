@@ -138,7 +138,7 @@ Based on Prof. Vavilov's actual research:
 
 ## External Links
 
-- arXiv: https://arxiv.org/search/?query=au:Maxim+G+Vavilov&searchtype=author
+- arXiv: https://arxiv.org/search/?query=Maxim+G+Vavilov&searchtype=author
 - ORCID: https://orcid.org/0000-0002-4953-8069
 - Department: https://physics.wisc.edu/
 

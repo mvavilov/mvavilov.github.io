@@ -63,7 +63,7 @@ class ProfessorWebsite {
         `;
 
         try {
-            const arxivQuery = 'https://export.arxiv.org/api/query?search_query=au:Maxim+Vavilov+AND+cat:quant-ph&sortBy=submittedDate&sortOrder=descending&max_results=50';
+            const arxivQuery = 'https://export.arxiv.org/api/query?search_query=Maxim+Vavilov+AND+cat:quant-ph&sortBy=submittedDate&sortOrder=descending&max_results=50';
             const response = await fetch(arxivQuery);
             const xmlText = await response.text();
             const parser = new DOMParser();

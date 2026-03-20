@@ -164,7 +164,7 @@ async function loadArXivPublications() {
         try {
         // Fetch from arXiv API using author name (gets all categories)
         // Prof. Vavilov has papers in quant-ph, cond-mat.mes-hall, cond-mat.dis-nn, etc.
-        const apiUrl = 'https://export.arxiv.org/api/query?search_query=au:Vavilov_M&sortBy=submittedDate&sortOrder=descending&max_results=100';
+        const apiUrl = 'https://export.arxiv.org/api/query?search_query=Vavilov_M&sortBy=submittedDate&sortOrder=descending&max_results=100';
         
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('Failed to fetch from arXiv');
@@ -178,7 +178,7 @@ async function loadArXivPublications() {
             container.innerHTML = `
                 <div style="text-align: center; padding: 3rem; color: var(--color-text-muted);">
                     <p>No publications found. Please check arXiv directly.</p>
-                    <a href="https://arxiv.org/search/?query=au:Maxim+G+Vavilov&searchtype=author" 
+                    <a href="https://arxiv.org/search/?query=Maxim+G+Vavilov&searchtype=author" 
                        class="btn" style="margin-top: 1rem;">
                         View on arXiv
                     </a>
@@ -300,7 +300,7 @@ async function loadArXivPublications() {
         container.innerHTML = `
             <div style="text-align: center; padding: 3rem; color: var(--color-text-muted);">
                 <p>Error loading publications. Please visit arXiv directly.</p>
-                <a href="https://arxiv.org/search/?query=au:Maxim+G+Vavilov&searchtype=author" 
+                <a href="https://arxiv.org/search/?query=Maxim+G+Vavilov&searchtype=author" 
                    class="btn" style="margin-top: 1rem;">
                     View on arXiv
                 </a>
@@ -509,42 +509,283 @@ async function loadNews() {
     }
 }
 
-function renderNews(data) {
-    const newsContainer = document.getElementById('news-content');
-    if (newsContainer && data.recent_news) {
-        const newsItems = data.recent_news.map(item => {
-            const formattedDate = new Date(item.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            
-            return `
-                <div class="news-item" style="margin-bottom: 2rem; padding: 1.5rem; border-left: 4px solid var(--color-uw-red); background: #f8f9fa;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
-                        <h3 style="color: var(--color-uw-red); font-size: 1.2rem; margin: 0; font-family: var(--font-display); flex: 1; min-width: 200px;">
-                            ${item.title}
-                        </h3>
-                        <span style="background: var(--color-uw-red); color: white; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;">
-                            ${item.category}
-                        </span>
+function buildNewsSlidesMarkup(items, includeIds) {
+    const n = items.length;
+    return items.map((item, i) => {
+        const formattedDate = new Date(item.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        const link = (item.link || '').trim();
+        const hasLink = link && link !== '#';
+        const readMore = hasLink
+            ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="news-slide-link">Read More →</a>`
+            : '';
+
+        const idAttr = includeIds ? ` id="news-slide-${i}"` : '';
+        const a11y = includeIds
+            ? ` role="tabpanel" aria-roledescription="slide" aria-label="${i + 1} of ${n}"`
+            : ' role="presentation" aria-hidden="true"';
+
+        return `
+            <article class="news-slide"${idAttr}${a11y}>
+                <div class="news-slide-card">
+                    <div class="news-slide-header">
+                        <h3 class="news-slide-title">${item.title}</h3>
+                        <span class="news-slide-category">${item.category}</span>
                     </div>
-                    <p style="color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.8rem;">
-                        ${item.summary}
-                    </p>
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span style="color: var(--color-text-muted); font-size: 0.9rem;">
-                            ${formattedDate}
-                        </span>
-                        <a href="${item.link}" target="_blank" style="color: var(--color-uw-red); text-decoration: none; font-weight: 500;">
-                            Read More →
-                        </a>
+                    <p class="news-slide-summary">${item.summary}</p>
+                    <div class="news-slide-footer">
+                        <span class="news-slide-date">${formattedDate}</span>
+                        ${readMore}
                     </div>
                 </div>
-            `;
-        }).join('');
-        
-        newsContainer.innerHTML = newsItems;
+            </article>
+        `;
+    }).join('');
+}
+
+function renderNews(data) {
+    const newsContainer = document.getElementById('news-content');
+    if (!newsContainer || !data.recent_news) return;
+
+    const items = data.recent_news;
+    if (items.length === 0) {
+        newsContainer.innerHTML = '';
+        return;
+    }
+
+    const segmentA = buildNewsSlidesMarkup(items, true);
+    const segmentB = buildNewsSlidesMarkup(items, false);
+
+    const multi = items.length > 1;
+
+    newsContainer.innerHTML = `
+        <div class="news-carousel news-banner${multi ? '' : ' news-banner--single'}" role="region" aria-label="Recent news">
+            <div class="news-carousel-viewport news-banner-viewport" tabindex="0" aria-label="Scrolling news — drag to move, or pause briefly when you interact">
+                <div class="news-banner-track">
+                    <div class="news-banner-segment">${segmentA}</div>
+                    ${multi ? `<div class="news-banner-segment" aria-hidden="true">${segmentB}</div>` : ''}
+                </div>
+            </div>
+        </div>
+    `;
+
+    initNewsBanner(newsContainer.querySelector('.news-carousel'), multi);
+}
+
+/**
+ * Smooth banner: translate3d driven by rAF + seamless loop (duplicate segment).
+ * Draggable (pointer capture); auto-scroll resumes after idle. Links still click if you don’t drag.
+ */
+function initNewsBanner(root, enableMarquee) {
+    const viewport = root.querySelector('.news-carousel-viewport');
+    const track = root.querySelector('.news-banner-track');
+    const segment = root.querySelector('.news-banner-segment');
+
+    if (!viewport || !track || !segment) return;
+
+    const SPEED_PX_PER_SEC = 45;
+    const IDLE_RESUME_MS = 4000;
+    const DRAG_THRESHOLD_PX = 6;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let idleResumeId = null;
+    let rafId = null;
+    let offsetPx = 0;
+    let lastTickTs = 0;
+    let playing = enableMarquee && !reducedMotion;
+    let dragPointerId = null;
+    let dragActive = false;
+    let dragStartClientX = 0;
+    let dragStartOffsetPx = 0;
+
+    function viewportWidth() {
+        return viewport.clientWidth;
+    }
+
+    function getSlidesPerView() {
+        const w = viewportWidth();
+        if (w < 640) return 1;
+        if (w < 1024) return 2;
+        return 3;
+    }
+
+    function getSegmentGapPx() {
+        const raw = window.getComputedStyle(segment).columnGap || window.getComputedStyle(segment).gap;
+        const n = parseFloat(raw);
+        return Number.isFinite(n) ? n : 12;
+    }
+
+    function updateSlideWidthVar() {
+        const perView = getSlidesPerView();
+        const gap = getSegmentGapPx();
+        const cw = viewportWidth();
+        const totalGaps = Math.max(0, perView - 1) * gap;
+        const cellW = Math.max(220, Math.floor((cw - totalGaps) / perView));
+        viewport.style.setProperty('--news-viewport-w', `${cellW}px`);
+    }
+
+    function loopWidthPx() {
+        const w = segment.offsetWidth;
+        return w > 0 ? w : 0;
+    }
+
+    function normalizeOffset() {
+        const w = loopWidthPx();
+        if (w <= 0) return;
+        while (offsetPx >= w) offsetPx -= w;
+        while (offsetPx < 0) offsetPx += w;
+    }
+
+    function applyTransform() {
+        track.style.transform = `translate3d(${-offsetPx}px, 0, 0)`;
+    }
+
+    function clearIdleResume() {
+        if (idleResumeId !== null) {
+            window.clearTimeout(idleResumeId);
+            idleResumeId = null;
+        }
+    }
+
+    function scheduleResumePlay() {
+        if (!enableMarquee || reducedMotion) return;
+        clearIdleResume();
+        idleResumeId = window.setTimeout(() => {
+            idleResumeId = null;
+            lastTickTs = 0;
+            playing = true;
+        }, IDLE_RESUME_MS);
+    }
+
+    function stopDragVisuals() {
+        dragActive = false;
+        dragPointerId = null;
+        viewport.classList.remove('is-dragging');
+    }
+
+    function onPointerDown(e) {
+        if (!enableMarquee || reducedMotion) return;
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        if (dragPointerId !== null) return;
+
+        playing = false;
+        clearIdleResume();
+        dragPointerId = e.pointerId;
+        dragActive = false;
+        dragStartClientX = e.clientX;
+        dragStartOffsetPx = offsetPx;
+    }
+
+    function onPointerMove(e) {
+        if (!enableMarquee || reducedMotion) return;
+        if (dragPointerId !== e.pointerId) return;
+
+        const dx = e.clientX - dragStartClientX;
+        if (!dragActive) {
+            if (Math.abs(dx) < DRAG_THRESHOLD_PX) return;
+            dragActive = true;
+            viewport.classList.add('is-dragging');
+            try {
+                viewport.setPointerCapture(e.pointerId);
+            } catch (_) {
+                /* ignore */
+            }
+        }
+
+        e.preventDefault();
+        offsetPx = dragStartOffsetPx - (e.clientX - dragStartClientX);
+        normalizeOffset();
+        applyTransform();
+    }
+
+    function endPointerInteraction(e) {
+        if (dragPointerId !== e.pointerId) return;
+
+        if (dragActive) {
+            try {
+                viewport.releasePointerCapture(e.pointerId);
+            } catch (_) {
+                /* ignore */
+            }
+        }
+
+        normalizeOffset();
+        applyTransform();
+        stopDragVisuals();
+        scheduleResumePlay();
+    }
+
+    function tick(ts) {
+        rafId = window.requestAnimationFrame(tick);
+
+        if (!enableMarquee || reducedMotion || document.hidden) return;
+        if (dragActive) return;
+        if (!playing) return;
+
+        const loopW = loopWidthPx();
+        if (loopW <= 0) return;
+
+        if (lastTickTs === 0) lastTickTs = ts;
+        const dt = Math.min(0.05, (ts - lastTickTs) / 1000);
+        lastTickTs = ts;
+
+        offsetPx += SPEED_PX_PER_SEC * dt;
+        while (offsetPx >= loopW) offsetPx -= loopW;
+        applyTransform();
+    }
+
+    updateSlideWidthVar();
+    requestAnimationFrame(() => {
+        updateSlideWidthVar();
+        normalizeOffset();
+        applyTransform();
+    });
+
+    const ro = new ResizeObserver(() => {
+        updateSlideWidthVar();
+        window.requestAnimationFrame(() => {
+            normalizeOffset();
+            applyTransform();
+        });
+    });
+    ro.observe(viewport);
+
+    if (enableMarquee && !reducedMotion) {
+        rafId = window.requestAnimationFrame(tick);
+
+        viewport.addEventListener('pointerdown', onPointerDown);
+        viewport.addEventListener('pointermove', onPointerMove, { passive: false });
+        viewport.addEventListener('pointerup', endPointerInteraction);
+        viewport.addEventListener('pointercancel', endPointerInteraction);
+        viewport.addEventListener('lostpointercapture', () => {
+            if (dragActive) {
+                normalizeOffset();
+                applyTransform();
+                stopDragVisuals();
+                scheduleResumePlay();
+            }
+        });
+
+        viewport.addEventListener('wheel', () => {
+            playing = false;
+            clearIdleResume();
+            scheduleResumePlay();
+        }, { passive: true });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                playing = false;
+                clearIdleResume();
+            } else {
+                lastTickTs = 0;
+                playing = true;
+            }
+        });
+    } else if (reducedMotion && enableMarquee) {
+        track.style.transform = '';
     }
 }
 
