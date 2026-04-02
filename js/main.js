@@ -164,7 +164,7 @@ async function loadArXivPublications() {
         try {
         // Fetch from arXiv API using author name (gets all categories)
         // Prof. Vavilov has papers in quant-ph, cond-mat.mes-hall, cond-mat.dis-nn, etc.
-        const apiUrl = 'https://export.arxiv.org/api/query?search_query=Vavilov_M&sortBy=submittedDate&sortOrder=descending&max_results=100';
+        const apiUrl = 'https://export.arxiv.org/api/query?search_query=au:Vavilov_M&sortBy=submittedDate&sortOrder=descending&max_results=100';
         
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('Failed to fetch from arXiv');
