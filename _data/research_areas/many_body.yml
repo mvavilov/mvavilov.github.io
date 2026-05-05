@@ -10,7 +10,7 @@ selected_papers:
     url: "https://doi.org/10.1103/PRXQuantum.2.030349"
     
   - title: "Impacts of random filling on spin squeezing via Rydberg dressing in optical clocks"
-    authors: "Cong Li, Yinqi Chen, Stefan Schداd, Maxim G. Vavilov, Subhadeep Gupta"
+    authors: 
     year: "2020"
     journal: "Phys. Rev. Research 2, 033298"
     url: "https://doi.org/10.1103/PhysRevResearch.2.033298"
