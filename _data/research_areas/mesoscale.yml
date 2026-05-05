@@ -4,14 +4,14 @@ icon: /assets/icons/themes/mesoscale.svg
 
 selected_papers:
   - title: "Majorana bound states under the influence of periodic magnetic fields"
-    authors: "Sayan Bandyopadhyay, Maxim G. Vavilov"
+    authors: "Viktoriia Kornich, Maxim G. Vavilov, Mark Friesen, M. A. Eriksson, and S. N. Coppersmith"
     year: "2020"
-    journal: "Phys. Rev. B 102, 024517"
-    url: "https://doi.org/10.1103/PhysRevB.102.024517"
+    journal: "Phys. Rev. B 101, 125414"
+    url: "https://doi.org/10.1103/PhysRevB.101.125414"
     
   - title: "Phonon-induced decoherence of a charge quadrupole qubit"
-    authors: "Zhujing Xu, Xuedong Hu, Maxim G. Vavilov"
-    year: "2019"
-    journal: "Phys. Rev. B 99, 085306"
-    url: "https://doi.org/10.1103/PhysRevB.99.085306"
+    authors: "Viktoriia Kornich, Maxim G. Vavilov, Mark Friesen, S. N. Coppersmith"
+    year: "2018"
+    journal: "New J. Phys. 20, 103048 (2018)"
+    url: "https://doi.org/10.1088/1367-2630/aae61f"
 
